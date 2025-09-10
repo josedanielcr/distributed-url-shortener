@@ -1,8 +1,8 @@
 ﻿using Domain.Entities;
 using Domain.Repository;
-using Persistance.Database;
+using Persistence.Database;
 
-namespace Persistance.Repositories;
+namespace Persistence.Repositories;
 
 public class ShortUrlRepository(ApplicationDbContext dbContext) : IShortUrlRepository
 {

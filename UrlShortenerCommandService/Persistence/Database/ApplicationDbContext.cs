@@ -1,6 +1,6 @@
 ﻿using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-namespace Persistance.Database;
+namespace Persistence.Database;
 
 public class ApplicationDbContext : DbContext
 {

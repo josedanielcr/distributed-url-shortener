@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Persistance.Database;
+using Persistence.Database;
 
 namespace Api.Extensions;
 

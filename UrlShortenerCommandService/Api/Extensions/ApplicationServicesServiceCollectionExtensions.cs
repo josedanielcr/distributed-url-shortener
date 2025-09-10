@@ -1,6 +1,6 @@
 ﻿using Application.ShortUrls.CreateShortUrl;
 using Domain.Repository;
-using Persistance.Repositories;
+using Persistence.Repositories;
 
 namespace Api.Extensions;
 
