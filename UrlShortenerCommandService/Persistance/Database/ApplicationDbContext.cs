@@ -2,11 +2,13 @@
 using Microsoft.EntityFrameworkCore;
 namespace Persistance.Database;
 
-public class ApplicationDbContext(DbContextOptions options) : DbContext(options)
+public class ApplicationDbContext : DbContext
 {
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+    {
+    }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
     }
-
     public DbSet<ShortUrl> ShortUrls { get; set; }
 }
