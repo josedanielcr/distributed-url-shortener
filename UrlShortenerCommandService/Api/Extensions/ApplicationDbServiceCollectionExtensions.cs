@@ -10,9 +10,11 @@ public static class ApplicationDbServiceCollectionExtensions
     {
         ArgumentNullException.ThrowIfNull(services);
         ArgumentNullException.ThrowIfNull(configuration);
+        var connectionString = configuration.GetConnectionString("Default");
+        ArgumentNullException.ThrowIfNull(configuration);
         services.AddDbContext<ApplicationDbContext>(options =>
         {
-            options.UseNpgsql(configuration.GetConnectionString("ConnectionStrings:Default")
+            options.UseNpgsql(connectionString
                  , opt => opt.SetPostgresVersion(configuration.GetValue<int>("EfCorePostgres:Version"),0));
         });
         return services;

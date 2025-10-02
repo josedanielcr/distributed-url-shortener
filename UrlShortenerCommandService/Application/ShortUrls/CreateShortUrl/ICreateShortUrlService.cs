@@ -3,5 +3,5 @@ namespace Application.ShortUrls.CreateShortUrl;
 
 public interface ICreateShortUrlService
 {
-    Task<int?> CreateShortUrl(ShortUrl shortUrl);
+    Task<int?> CreateShortUrl(CreateShortUrlInput shortUrl);
 }
