@@ -1,4 +1,5 @@
-﻿using Domain.Repository;
+﻿using Domain.Entities;
+using Domain.Repository;
 
 namespace Application.ShortUrls.CreateShortUrl;
 
@@ -6,7 +7,7 @@ public class CreateShortUrlService(IShortUrlRepository urlRepository) : ICreateS
 {
     private readonly IShortUrlRepository _urlRepository = urlRepository;
 
-    public Task<int?> CreateShortUrl(Domain.Entities.ShortUrl shortUrl)
+    public async Task<int?> CreateShortUrl(ShortUrl shortUrl)
     {
         throw new NotImplementedException();
     }
