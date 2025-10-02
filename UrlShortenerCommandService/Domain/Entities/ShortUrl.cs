@@ -7,5 +7,5 @@ public class ShortUrl
     public required string ShortenedUrl { get; init; }
     public required string HostMachine { get; init; }
     public required DateTime CreatedAt { get; init; }
-    public required DateTime UpdatedAt { get; set; }
+    public DateTime? UpdatedAt { get; set; }
 }

@@ -6,10 +6,10 @@ namespace Persistence.Repositories;
 
 public class ShortUrlRepository(ApplicationDbContext dbContext) : IShortUrlRepository
 {
-    private readonly ApplicationDbContext _dbContext = dbContext;
-
-    public Task<int?> AddShortUrlAsync(ShortUrl shortUrl)
+    public async Task<int?> AddShortUrlAsync(ShortUrl shortUrl)
     {
-        throw new NotImplementedException();
+        await dbContext.ShortUrls.AddAsync(shortUrl);
+        await dbContext.SaveChangesAsync();
+        return shortUrl.Id;
     }
 }
